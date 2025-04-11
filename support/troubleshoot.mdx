@@ -1,0 +1,68 @@
+---
+title: "Troubleshooting"
+description: "Resolve common issues with GridScout"
+---
+
+If you're experiencing issues with GridScout, this guide will help you resolve common problems.
+
+## Common Issues
+
+### Bot Not Responding to Commands
+
+If GridScout isn't responding to your slash commands, check the following:
+
+- **Check permissions**: Ensure GridScout has the necessary permissions in your server:
+  - Read Messages/View Channels
+  - Send Messages
+  - Embed Links
+  - Use External Emojis
+- **Bot status**: Check if GridScout is online. The bot may be down for maintenance or experiencing outages.
+- **Command usage**: Make sure you're using the commands correctly. All commands start with a forward slash (`/`).
+- **Discord service**: Check if Discord is experiencing any service issues that might affect bot functionality.
+
+### Incorrect or Outdated Data
+
+If you're seeing outdated or incorrect data:
+
+- **Data refresh timing**: GridScout updates its data as soon as our upstream provider does, which is normally the same day as the race event. Please wait a bit if you're checking immediately after a race.
+- **Specific data concerns**: If you believe there's a persistent error in the data (not just timing-related), please report it in our Support Server.
+- **F1 data corrections**: Occasionally, official F1 results may be amended after initial publication (e.g., due to penalties). We update our data to reflect these changes as soon as possible.
+
+## Error Messages
+
+Here are solutions for common error messages:
+
+### "I don't have permission to do that"
+
+GridScout needs additional permissions in your server. Ask a server administrator to check the bot's role permissions.
+
+### "This interaction failed"
+
+This typically happens when:
+
+- You're trying to interact with a message that's too old (buttons expire after 15 minutes)
+- The bot underwent a routine update or maintenance while you were using it
+- There was a temporary connection issue
+
+Try running the command again.
+
+### "Unknown driver/team/circuit"
+
+Check your spelling or try using a more common name/abbreviation through the autocomplete feature.
+
+## Advanced Troubleshooting
+
+### Server-Specific Issues
+
+If GridScout works in other servers but not yours:
+
+- Remove and re-invite the bot using the [invitation link](https://discord.com/api/oauth2/authorize?client_id=1032988084747063346&permissions=277025704960&scope=bot%20applications.commands)
+- Verify your server isn't at the Discord integration limit
+
+## Getting Support
+
+If you're still experiencing issues:
+
+- **Join our Support Server**: Get real-time help in our [Discord Support Server](https://discord.gg/SdK9QCquP4)
+- **Check Known Issues**: Review submitted issues on our [GitHub](https://github.com/GridScout/GridScout/issues)
+- **Report a Bug**: Use our [GitHub Issues](https://github.com/GridScout/GridScout/issues/new?assignees=&labels=bug&template=bug_report.md&title=) page to report bugs directly to our development team
