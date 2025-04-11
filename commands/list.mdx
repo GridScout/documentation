@@ -1,0 +1,278 @@
+---
+title: "Command List"
+summary: "Learn about the commands available in GridScout"
+priority: 1
+---
+
+## General Commands
+
+### /about command
+
+Provides details about the bot, including websocket latency and support links.
+
+**Example Usage:**
+
+```bash
+/about
+```
+
+---
+
+<Tag color="teal">Interactive</Tag>
+
+### /settings notifications
+
+Configure which channel should receive race notifications from GridScout.
+
+<details>
+<summary>Hide Options</summary>
+
+**channel** channel (required)
+
+The Discord channel where race notifications should be sent.
+</details>
+
+**Example Usage:**
+
+```bash
+/settings notifications #race-notifications
+```
+
+---
+
+### /settings motorsportcom
+
+Configure which channel should receive motorsport.com news from GridScout.
+
+<details>
+<summary>Hide Options</summary>
+
+**channel** channel (required)
+
+The Discord channel where motorsport.com news should be sent.
+</details>
+
+**Example Usage:**
+
+```bash
+/settings motorsportcom #motorsportcom-news
+```
+
+---
+
+## Calendar Commands
+
+<Tag color="teal">Interactive</Tag>
+
+### /next command
+
+Provides detailed information about the next race on the F1 calendar, including all session times.
+
+**Example Usage:**
+
+```bash
+/next
+```
+
+---
+
+<Tag color="purple">Autocomplete</Tag>
+### /calendar command
+
+Displays all races for a given season with dates, and countries. Additionally, the upcoming race includes additional session time details.
+
+<details>
+<summary>Hide Options</summary>
+
+**season** string (optional)
+
+The F1 season to view the calendar for. Defaults to current season if not specified.
+</details>
+
+**Example Usage:**
+
+```bash
+/calendar
+/calendar 2023
+```
+
+---
+
+## Driver Commands
+
+<Tag color="purple">Autocomplete</Tag>
+
+### /driver command
+
+Provides driver information including basic details (name, number, team, nationality, date of birth), career statistics (championships, podiums, points), and recent race results.
+
+<details>
+<summary>Hide Options</summary>
+
+**driver** string (required)
+
+The name of the driver to look up (with autocomplete)
+</details>
+
+**Example Usage:**
+
+```bash
+/driver Lewis Hamilton
+/driver Max Chilton
+```
+
+---
+
+## Constructor Commands
+
+<Tag color="purple">Autocomplete</Tag>
+### /constructor command
+
+Provides team information including team details (full name, nationality), current engine and chassis specifications, current drivers, historical statistics, and recent results.
+
+<details>
+<summary>Hide Options</summary>
+
+**team** string (required)
+
+The name of the team to look up (with autocomplete)
+</details>
+
+**Example Usage:**
+
+```bash
+/constructor Ferrari
+/constructor Red Bull
+```
+
+---
+
+## Results Commands
+
+<Tag color="purple">Autocomplete</Tag><Tag color="teal">Interactive</Tag>
+
+### /results command
+
+Displays results for different sessions of a specified race (practice, qualifying, sprint, race) with an interactive menu to switch between sessions. Shows driver positions, times/gaps, and status.
+
+<details>
+<summary>Hide Options</summary>
+
+**season** integer (required)
+
+The F1 season to view results from.
+
+**race** string (required)
+
+The race to view results for (with autocomplete)
+</details>
+
+**Example Usage:**
+
+```bash
+/results 2023 Monaco Grand Prix
+/results 1950 British Grand Prix
+```
+
+---
+
+## Standings Commands
+
+<Tag color="purple">Autocomplete</Tag>
+
+### /standings driver command
+
+Displays the current or historical driver championship standings, including driver names, points, and positions.
+
+<details>
+<summary>Hide Options</summary>
+
+**season** integer (optional)
+
+The F1 season to view standings from. Defaults to current season if not specified.
+</details>
+
+**Example Usage:**
+
+```bash
+/standings driver
+/standings driver 2023
+```
+
+---
+
+<Tag color="purple">Autocomplete</Tag>
+
+### /standings constructor command
+
+Displays the current or historical constructor championship standings, including team names, points, and positions.
+
+<details>
+<summary>Hide Options</summary>
+
+**season** integer (optional)
+
+The F1 season to view standings from. Defaults to current season if not specified.
+</details>
+
+**Example Usage:**
+
+```bash
+/standings constructor
+/standings constructor 2022
+```
+
+---
+
+## Command Features
+
+### Autocomplete
+
+Almost all commands that require specific parameters (drivers, teams, circuits, seasons) support Discord's autocomplete feature. Simply start typing and GridScout will suggest matching options.
+
+<Banner type="important">
+  For best results, use common names or abbreviations for drivers, teams, and circuits. The autocomplete will help you find the correct option.
+</Banner>
+
+### Interactive Navigation
+
+Several commands, such as `/next` and `/results` include interactive buttons or select menus that allow you to:
+- Navigate through races in the season
+- Switch between different session types (practice, qualifying, sprint, race)
+- View detailed information without needing to use multiple commands
+
+### Season Selection
+
+When specifying a season:
+- If not provided, the current season is used
+- Seasons back to 1950 are available for driver data
+- Constructor data is available from 1958 onwards
+- All seasons feature autocomplete for easy selection
+
+## Examples
+
+Here are some example commands to get you started:
+
+```bash
+/next                           # Shows information about the upcoming race
+/driver hamilton                # Shows information about Lewis Hamilton
+/results 2023 monaco            # Shows the results of the 2023 Monaco Grand Prix
+/standings driver               # Shows current driver standings
+/standings constructor 2022     # Shows the 2022 constructor standings
+/calendar                       # Shows the current season's race calendar
+/constructor red_bull           # Shows information about Red Bull Racing
+```
+
+## Rich Data Presentation
+
+GridScout presents data with:
+- Country flag emojis for nationalities
+- Team logos for constructors
+- Position numbers
+- ANSI-colored code blocks for detailed race results
+- Timestamps that adapt to your local timezone
+
+## Troubleshooting
+
+If you encounter any issues with commands, please refer to the [troubleshooting guide](/docs/support/troubleshoot) or join our [Support Server](https://discord.gg/SdK9QCquP4) for assistance.
+
